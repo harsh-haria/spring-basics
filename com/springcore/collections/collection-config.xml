@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+		https://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context
+		http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<bean name="emp1"  class="com.springcore.collections.Emp">
+		<property name="name" value="Harsh1" />
+		<property name="phones">
+			<list>
+				<value>1231231234</value>
+				<value>3453453456</value>
+				<value>5675675678</value>
+			</list>
+		</property>
+		<property name="addresses">
+			<set>
+				<value>Mumbai</value>
+				<value>Banglore</value>
+			</set>
+		</property>
+		<property name="courses">
+			<map>
+				<entry key="Java" value="2" />
+				<entry key="JavaScript" value="6" />
+			</map>
+		</property>
+		
+		<property name="props">
+			<props>
+				<prop key="tester"> this is a tester</prop>
+				<prop key="bruh">tester 2</prop>
+			</props>
+		</property>
+	</bean>
+
+</beans>
