@@ -12,6 +12,10 @@ public class Test {
 		 foodItem f1 = (foodItem) context.getBean("f1");
 		 System.out.println(f1);
 		 context.registerShutdownHook();
+		 
+		 Drink d1 = (Drink) context.getBean("drink1");
+		 System.out.println(d1);
+		 
 	}
 
 }

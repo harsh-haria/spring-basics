@@ -10,5 +10,7 @@
 
 	<bean class="com.springcore.lifecycle.foodItem" name="f1"
 		p:price="15" init-method="init" destroy-method="destroy" />
+		 
+	<bean class="com.springcore.lifecycle.Drink" name="drink1" p:price="5"/>
 
 </beans>
