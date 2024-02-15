@@ -16,6 +16,8 @@ public class Test {
 		 Drink d1 = (Drink) context.getBean("drink1");
 		 System.out.println(d1);
 		 
+		 Topic topic1 = (Topic) context.getBean("topic1");
+		 System.out.println(topic1);
 	}
 
 }

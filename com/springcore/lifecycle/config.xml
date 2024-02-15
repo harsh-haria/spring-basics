@@ -7,10 +7,14 @@
 		https://www.springframework.org/schema/beans/spring-beans.xsd
 		http://www.springframework.org/schema/context
 		http://www.springframework.org/schema/context/spring-context.xsd">
+		
+	<context:annotation-config />
 
 	<bean class="com.springcore.lifecycle.foodItem" name="f1"
 		p:price="15" init-method="init" destroy-method="destroy" />
 		 
 	<bean class="com.springcore.lifecycle.Drink" name="drink1" p:price="5"/>
+	
+	<bean class="com.springcore.lifecycle.Topic" name="topic1" p:example="Aerodynamics" />
 
 </beans>
