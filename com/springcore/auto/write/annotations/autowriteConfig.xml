@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+		https://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context
+		http://www.springframework.org/schema/context/spring-context.xsd">
+		
+	<context:annotation-config />
+
+	<bean class="com.springcore.auto.write.annotations.Address" name="address1">
+		<property name="street" value="L.B.S. Marg" />
+		<property name="city" value="Mulund" />
+	</bean>
+	
+	<!-- <bean class="com.springcore.auto.write.annotations.Address" name="address">
+		<property name="street" value="Station Road" />
+		<property name="city" value="Bhandup" />
+	</bean> -->
+
+	<!-- here while using AutoWiring we have 3 options. first is 'byName' this one searches for the name in the bean to be the same as that mentioned in the parent class. Next we have the 'byType'. as the name suggests it picks the bean with the same type as mentioned in the parent class. Last one we have is constructor. Works similar to the 'byType', The name is mentioned in the bean and then the same name is checked while applying the bean. -->
+	<bean class="com.springcore.auto.write.annotations.Emp" name="emp1"/>
+
+</beans>
