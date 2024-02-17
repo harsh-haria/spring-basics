@@ -15,10 +15,10 @@
 		<property name="city" value="Mulund" />
 	</bean>
 	
-	<!-- <bean class="com.springcore.auto.write.annotations.Address" name="address">
+	<bean class="com.springcore.auto.write.annotations.Address" name="address">
 		<property name="street" value="Station Road" />
 		<property name="city" value="Bhandup" />
-	</bean> -->
+	</bean>
 
 	<!-- here while using AutoWiring we have 3 options. first is 'byName' this one searches for the name in the bean to be the same as that mentioned in the parent class. Next we have the 'byType'. as the name suggests it picks the bean with the same type as mentioned in the parent class. Last one we have is constructor. Works similar to the 'byType', The name is mentioned in the bean and then the same name is checked while applying the bean. -->
 	<bean class="com.springcore.auto.write.annotations.Emp" name="emp1"/>

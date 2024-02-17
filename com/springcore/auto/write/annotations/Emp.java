@@ -1,11 +1,13 @@
 package com.springcore.auto.write.annotations;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 
 public class Emp {
 	
 	//if we use @Autowired here, it works the same as autowiring using byName
-//	@Autowired
+	@Autowired
+	@Qualifier("address1") //this helps us to choose bean of many beans to be used for autowiring
 	private Address address;
 
 	public Address getAddress() {
@@ -13,7 +15,6 @@ public class Emp {
 	}
 
 	//if we use @Autowired here, it works the same as autowiring using byType
-	@Autowired
 	public void setAddress(Address address) {
 		this.address = address;
 	}
@@ -24,7 +25,6 @@ public class Emp {
 	}
 
 	//if we use @Autowired here, it works the same as autowiring using Constructor
-	@Autowired
 	public Emp(Address address) {
 		super();
 		this.address = address;
