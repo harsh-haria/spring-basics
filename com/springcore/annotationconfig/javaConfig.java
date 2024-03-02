@@ -7,8 +7,13 @@ import org.springframework.context.annotation.Configuration;
 public class javaConfig {
 	
 	@Bean
+	public Teacher getTeacherStatus() {
+		return new Teacher();
+	}
+	
+	@Bean
 	public Student getStudent() {
-		Student student = new Student();
+		Student student = new Student(getTeacherStatus());
 		return student;
 	}
 }
